@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  plant: 
+  neigbour_id: 1
+  companion_function_id: 1
+  description: MyText
+  complimentary: false
+
+two:
+  plant: 
+  neigbour_id: 1
+  companion_function_id: 1
+  description: MyText
+  complimentary: false

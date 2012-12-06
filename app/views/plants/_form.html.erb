@@ -1,0 +1,41 @@
+<%= form_for(@plant) do |f| %>
+  <% if @plant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plant.errors.count, "error") %> prohibited this plant from being saved:</h2>
+
+      <ul>
+      <% @plant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sci_name %><br />
+    <%= f.text_field :sci_name %>
+  </div>
+  <div class="field">
+    <%= f.label :common_name %><br />
+    <%= f.text_field :common_name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_id %><br />
+    <%= f.select :parent_id, Plant.all.map {|plant| [plant.common_name + " - " + plant.sci_name, plant.id]}, { :include_blank => true } %>
+  </div>
+  <div class="field">
+    <%= f.label :dimension %><br />
+    <%= f.number_field :dimension %>
+  </div>
+  <div class="field">
+    <%= f.label :position_id %><br />
+    <%= f.number_field :position_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image file:</b>
+  <%= @image.image_file %><br/>
+  <%= image_tag @image.image_file.url(:medium) %>
+</p>
+
+<p>
+  <b>Imageable:</b>
+  <%= @image.imageable_id %>
+</p>
+
+<p>
+  <b>Imageable type:</b>
+  <%= @image.imageable_type %>
+</p>
+
+
+<%= link_to 'Edit', [:edit, @imageable, @image] %> |
+<%= link_to 'Back', [@imageable, :images] %>

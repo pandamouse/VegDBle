@@ -1,0 +1,34 @@
+<h1>Listing plants</h1>
+
+<table>
+  <tr>
+    <th>Sci name</th>
+    <th>Common name</th>
+    <th>Description</th>
+    <th>Parent</th>
+    <th>Dimension</th>
+    <th>Position</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @plants.each do |plant| %>
+<tr>
+<!--  <tr onmouseleave="$('#plant_<%= plant.id %>_description').hide();" onmouseenter="$('#plant_<%= plant.id %>_description').show();"> -->
+    <td><%= plant.sci_name %></td>
+    <td><%= plant.common_name %></td>
+    <td><%= plant.parent_id %></td>
+    <td><%= plant.dimension %></td>
+    <td><%= plant.position_id %></td>
+    <td><%= link_to 'Show', plant %></td>
+    <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
+    <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <div id="plant_<%= plant.id %>_description"><%= plant.description %></div>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Plant', new_plant_path %>

@@ -1,0 +1,6 @@
+<%= form_for([@l_plant, @l_plant.r_companions.build]) do |f| %>
+  <div class="field">
+    <%= f.label :r_plant_id %> <br/>
+    <%= f.select :r_plant_id, Plant.all, :id, :common_name %>
+  </div>
+<% end %>

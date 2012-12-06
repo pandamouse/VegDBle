@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sci_name: MyString
+  common_name: MyString
+  description: MyText
+  parent_id: 1
+  dimention: 1
+  position_id: 1
+
+two:
+  sci_name: MyString
+  common_name: MyString
+  description: MyText
+  parent_id: 1
+  dimention: 1
+  position_id: 1

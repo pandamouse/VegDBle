@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sci name:</b>
+  <%= @plant.sci_name %>
+</p>
+
+<p>
+  <b>Common name:</b>
+  <%= @plant.common_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @plant.description %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @plant.parent_id %> - <%= @plant.parent.common_name + " - " + @plant.parent.sci_name %>
+</p>
+
+<p>
+  <b>Dimension:</b>
+  <%= @plant.dimension %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @plant.position_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>
